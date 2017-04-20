@@ -6,138 +6,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.5.3/echarts.common.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.5.3/echarts.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/js/bootstrap.js"></script>
+    <script src="WEB-INF/js/myjs.js"></script>
+    <link rel="stylesheet" href="WEB-INF/myCss/myCss.css"/>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.css" type="text/css"/>
-    <style type="text/css">
-        .first{
-            margin-top:0;
-            margin-left:20%;
-            width: 600px;
-            height: 400px;
-        }
-        .second{
-            margin-top:0;
-            width: 600px;
-            height: 400px;
-        }
-
-    </style>
 </head>
 <body>
-    <div class='container'>
-        <button type="button" class="btn btn-primary">Default</button>
-        <button type="button" value="first" onclick="first()">FIRST</button>
-        <br>
-        <input type="button" value="second" style="color: #3fff4d" onclick="second()">
+<div class="hello">
+    <div class="hello">
+        <button class="btn btn-success col-md-1" value="first" onclick="first()">FIRST</button>
+        <button class="btn btn-primary col-md-1" value="second" style="color: #3fff4d" onclick="second()">second</button>
+        <button class="btn btn-primary col-md-1" onclick="third()">third</button>
     </div>
 <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-    <div id="parent">
-        <div id="test1" class="first"></div>
-        <div id="test2" class="second"></div>
+    <div id="parent" style="text-align: center">
+        <div id="test1" class="first">test1</div>
+        <div id="test2" class="second">test2</div>
+        <div id="test3" class="third">test3</div>
     </div>
+</div>
 
-<script type="text/javascript">
-    // 基于准备好的dom，初始化echarts实例
-    function first()
-    {
-        var myChart = echarts.init(document.getElementById('test1'));
-
-        // 指定图表的配置项和数据
-        var option1 = {
-            title: {
-                text: 'ECharts 入门示例'
-            },
-            tooltip: {},
-            legend: {
-                data: ['价格']
-            },
-            xAxis: {
-                data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子", "test"]
-            },
-            yAxis: {},
-            series: [{
-                name: '价格',
-                type: 'bar',
-                data: [5, 20, 36, 10, 10, 20, 10]
-            }]
-        };
-
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option1);
-    }
-    /*
-    *the second diagram
-     */
-
-    function second()
-    {
-        var myChart2 = echarts.init(document.getElementById('test2'));
-        var base = +new Date(2014, 9, 3);
-        var oneDay = 24 * 3600 * 1000;
-        var date = [];
-
-        var data = [Math.random() * 150];
-        var now = new Date(base);
-
-        function addData(shift) {
-            now = [now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/');
-            date.push(now);
-            data.push((Math.random() - 0.4) * 10 + data[data.length - 1]);
-
-            if (shift) {
-                date.shift();
-                data.shift();
-            }
-
-            now = new Date(+new Date(now) + oneDay);
-        }
-
-        for (var i = 1; i < 100; i++) {
-            addData();
-        }
-
-        option = {
-            title: {
-                text: "second picture"
-            },
-
-            xAxis: {
-                type: 'category',
-                boundaryGap: false,
-                data: date
-            },
-            yAxis: {
-                boundaryGap: [0, '50%'],
-                type: 'value'
-            },
-            series: [
-                {
-                    name: '成交',
-                    type: 'line',
-                    smooth: true,
-                    symbol: 'none',
-                    stack: 'a',
-                    areaStyle: {
-                        normal: {}
-                    },
-                    data: data
-                }
-            ]
-        };
-
-        setInterval(function () {
-            addData(true);
-            myChart2.setOption({
-                xAxis: {
-                    data: date
-                },
-                series: [{
-                    name: '成交',
-                    data: data
-                }]
-            });
-        }, 500);
-    }
-</script>
 </body>
 
 </html>
