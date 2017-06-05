@@ -1,7 +1,7 @@
-package education.cs.scu.controller;
+package edu.cs.scu.controller;
 
-import education.cs.scu.entity.User;
-import education.cs.scu.service.LoginService;
+import edu.cs.scu.entity.User;
+import edu.cs.scu.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

@@ -1,8 +1,6 @@
-package education.cs.scu.service;
+package edu.cs.scu.service;
 
-import education.cs.scu.entity.User;
-
-import java.util.List;
+import edu.cs.scu.entity.User;
 
 /**
  * Created by maicius on 2017/3/31.

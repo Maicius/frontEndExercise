@@ -1,15 +1,15 @@
-package education.cs.scu.service.impl;
+package edu.cs.scu.service.impl;
 
-import education.cs.scu.entity.User;
-import education.cs.scu.mapper.UserMapper;
-import education.cs.scu.service.LoginService;
+import edu.cs.scu.entity.User;
+import edu.cs.scu.mapper.UserMapper;
+import edu.cs.scu.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 
 /**
  * Created by maicius on 2017/3/31.
  */
-public class LoginServiceImpl implements LoginService{
+public class LoginServiceImpl implements LoginService {
     @Autowired
     private UserMapper userMapper;
 

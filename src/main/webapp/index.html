@@ -1,32 +1,40 @@
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
     <title>hello</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,
+                                   initial-scale=1.0,
+                                   maximum-scale=1.0,
+                                   user-scalable=1.0">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.5.3/echarts.common.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.5.3/echarts.common.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.5.3/echarts.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/js/bootstrap.js"></script>
-    <script src="WEB-INF/js/myjs.js"></script>
-    <link rel="stylesheet" href="WEB-INF/myCss/myCss.css"/>
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.css" type="text/css"/>
+
+
+    <link rel="stylesheet" href="css/myCss.css"/>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
 </head>
 <body>
-<div class="hello">
+<div>
     <div class="hello">
-        <button class="btn btn-success col-md-1" value="first" onclick="first()">FIRST</button>
-        <button class="btn btn-primary col-md-1" value="second" style="color: #3fff4d" onclick="second()">second</button>
-        <button class="btn btn-primary col-md-1" onclick="third()">third</button>
-        <button class="btn btn-primary col-md-1" onclick="simpleChart()">SimpleChart</button>
+        <button class="btn btn-success col-md-2" value="first" onclick="first()">FIRST</button>
+        <button class="btn btn-primary col-md-2" value="second" style="color: #3fff4d" onclick="second()">second</button>
+        <button class="btn btn-primary col-md-2" onclick="third()">third</button>
+        <button class="btn btn-primary col-md-2" onclick="simpleChart()">SimpleChart</button>
     </div>
-<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-    <div id="parent" style="text-align: center">
-        <div id="test1" class="first">test1</div>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="parent">
+        <div id="test1" class="col-md-3 col-sm-3 col-xs-6 first">test1</div>
         <div id="test2" class="second">test2</div>
         <div id="test3" class="third">test3</div>
         <div id="test4" class="third">test4</div>
     </div>
 </div>
-
+<script src="js/myjs.js"></script>
 </body>
 
 </html>

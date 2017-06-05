@@ -1,6 +1,6 @@
-package education.cs.scu.mapper;
+package edu.cs.scu.mapper;
 
-import education.cs.scu.entity.User;
+import edu.cs.scu.entity.User;
 
 /**
  * Created by maicius on 2017/3/31.
