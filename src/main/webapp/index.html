@@ -12,23 +12,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.5.3/echarts.common.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.5.3/echarts.common.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.5.3/echarts.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/js/bootstrap.js"></script>
-
-
     <link rel="stylesheet" href="css/myCss.css"/>
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
 </head>
 <body>
 <div>
     <div class="hello">
-        <button class="btn btn-success col-md-2" value="first" onclick="first()">FIRST</button>
-        <button class="btn btn-primary col-md-2" value="second" style="color: #3fff4d" onclick="second()">second</button>
-        <button class="btn btn-primary col-md-2" onclick="third()">third</button>
-        <button class="btn btn-primary col-md-2" onclick="simpleChart()">SimpleChart</button>
+        <button class="btn btn-success col-md-12" value="first" onclick="first()">FIRST</button>
+        <button class="btn btn-primary col-md-12" value="second" style="color: #3fff4d" onclick="drawDoublePie()">second</button>
+        <button class="btn btn-primary col-md-12" onclick="third()">third</button>
+        <button class="btn btn-primary col-md-12" onclick="drawSeqChart()">SimpleChart</button>
     </div>
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
     <div id="parent">
-        <div id="test1" class="col-md-3 col-sm-3 col-xs-6 first">test1</div>
+        <div id="test1" class="first">test1</div>
         <div id="test2" class="second">test2</div>
         <div id="test3" class="third">test3</div>
         <div id="test4" class="third">test4</div>
